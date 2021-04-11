@@ -1,4 +1,85 @@
+FUNCTION
+
+INLINE FUNCTION EXPRESSIONS
+
+// Function expression that assigns the function displayFavorite 
+// to the variable favoriteMovie
+var favoriteMovie = function displayFavorite(movieName) {
+  console.log("My favorite movie is " + movieName);
+};
+
+// Function declaration that has two parameters: a function for displaying
+// a message, along with a name of a movie
+function movies(messageFunction, name) {
+  messageFunction(name);
+}
+
+// Call the movies function, pass in the favoriteMovie function and name of movie
+movies(favoriteMovie, "Finding Nemo");
+//-----------------------------------------------------------------------------------//
+function movies(messageFunction, name) {
+  messageFunction(name);
+}
+
+// Call the movies function, pass in the function and name of movie
+movies(function displayFavorite(movieName) {
+  console.log("My favorite movie is " + movieName);
+}, "Finding Nemo");
+
+
+function test(function1, fruit) {
+  function1(fruit); }
+
+  test(function thisIs(fruitName) {console.log("this is a " + fruitName);}, "banana");
+
+
+
+
+
 LOOPS
+
+FUNCTION with LOOPS
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
+* * * * * * * 
+* * * * * * * * 
+* * * * * * * * * 
+* * * * * * * * * *
+
+function makeLine(length) {
+  var line = "";
+  for (var j = 1; j <= length; j++) {
+      line += "* ";
+  }
+  return line + "\n";
+}
+
+// your code goes here.  Make sure you call makeLine() in your own code.
+function buildTriangle(length) {
+  // Let's build a huge string equivalent to the triangle
+  var triangle = "";
+
+  //Let's start from the topmost line
+
+
+  for(var lineNumber=1; lineNumber<=length; lineNumber++){
+      // We will not print one line at a time.
+      // Rather, we will make a huge string that will comprise the whole triangle
+      triangle = triangle + makeLine(lineNumber);
+  }
+  return triangle;
+
+}
+
+// test your code by uncommenting the following line
+// Note that the function buildTriangle() must return a string 
+// because the console.log() accepts a string argument
+  console.log(buildTriangle(10));
 
 
 
@@ -23,7 +104,28 @@ while (stop) {
 
 FOR
 
+// A for loop that prints 1, 2, and 3
+for (let counterOne = 1; counterOne < 4; counterOne++){
+  console.log(counterOne);
+}
+ 
+// A while loop that prints 1, 2, and 3
+let counterTwo = 1;
+while (counterTwo < 4) {
+  console.log(counterTwo);
+  counterTwo++;
+}
 
+
+const myArray = [6, 19, 20];
+const yourArray = [19, 81, 2];
+for (let i = 0; i < myArray.length; i++) {
+  for (let j = 0; j < yourArray.length; j++) {
+    if (myArray[i] === yourArray[j]) {
+      console.log('Both loops have the number: ' + yourArray[j])
+    }
+  }
+};
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
