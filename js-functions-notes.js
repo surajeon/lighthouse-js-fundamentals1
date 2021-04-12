@@ -51,6 +51,8 @@ words.forEach(function(word, num, all) {
   console.log("Word " + num + " in " + all.toString() + " is " + word);
 });
 
+
+
 map 
 var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
 
