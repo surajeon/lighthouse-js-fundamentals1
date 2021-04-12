@@ -1,3 +1,86 @@
+ARRAY 
+
+length
+push
+pop
+splice(postion for add/remove, remove position(optional), adding element )
+shift, unshift
+forEach(element, index, array) - up to 3
+
+
+const moves = ['north', 'north', 'west', 'west', 'north', 'east','north']
+const finalPosition = function (moves) {
+  let position = [0,0];
+  for (const move of moves) {
+    if (move === "north") {
+      position[1] = position[1] + 1;
+    } else if (move === "south"){
+      position[1] = position[1] - 1;
+    } else if (move === "east") {
+      position[0] = position[0] + 1;
+    } else if (move === "west") {
+      position[0] = position[0] - 1;
+    }
+  }
+  return position;
+}
+finalPosition(['north', 'north', 'west', 'west', 'north', 'east','north']);
+
+
+Donuts...
+
+forEach
+var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
+
+donuts.forEach(function(donut) {
+  donut += " hole";
+  donut = donut.toUpperCase();
+  console.log(donut);
+});
+
+for (var i = 0; i < donuts.length; i++) {
+  donuts[i] += " hole";
+  donuts[i] = donuts[i].toUpperCase();
+  console.log(donuts[i]);
+}
+
+Cats...
+
+words = ["cat", "in", "hat"];
+words.forEach(function(word, num, all) {
+  console.log("Word " + num + " in " + all.toString() + " is " + word);
+});
+
+map 
+var donuts = ["jelly donut", "chocolate donut", "glazed donut"];
+
+var improvedDonuts = donuts.map(function(donut) {
+  donut += " hole";
+  donut = donut.toUpperCase();
+  return donut;
+});
+
+
+var bills = [50.23, 19.12, 34.01,
+  100.11, 12.15, 9.90, 29.11, 12.99,
+  10.00, 99.22, 102.20, 100.10, 6.77, 2.22
+];
+
+var totals = bills.map(function(num){
+  num *= 1.15;
+  return  Number(num.toFixed(2));
+  
+});
+
+console.log(totals);
+
+
+
+
+
+
+
+
 FUNCTION
 
 INLINE FUNCTION EXPRESSIONS
@@ -233,7 +316,7 @@ var eatsAnimals = true;
  */
 
 var category = /* your code goes here */
-eatsPlants ? (eatsAnimals ? "omnivore" : "herbivore") : (eatsAnimals ? "carnivore" : "undefined");
+var category = eatsPlants ? (eatsAnimals ? "omnivore" : "herbivore") : (eatsAnimals ? "carnivore" : "undefined");
 console.log(category);
 
 
